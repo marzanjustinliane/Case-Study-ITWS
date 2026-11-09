@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PickleCourt | Schedule Court</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="booking-form.css">
+    <link rel="icon" type="image/png" href="Logo/PB Logo.png">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Pickle<span>Court</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courts.html">View Courts</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="#contact">About Us</a></li>
+                <li><button class="admin-login-button" id="adminLoginButton" type="button">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <dialog class="admin-login-dialog" id="adminLoginDialog" aria-labelledby="adminLoginTitle">
+        <form id="adminLoginForm">
+            <h2 id="adminLoginTitle">Admin Login</h2>
+            <label for="adminUsername">Username</label>
+            <input id="adminUsername" name="username" type="text" autocomplete="username" required>
+            <label for="adminPassword">Password</label>
+            <input id="adminPassword" name="password" type="password" autocomplete="current-password" required>
+            <p class="admin-login-notice">Demo only — authentication is not connected.</p>
+            <p class="admin-login-message" id="adminLoginMessage" role="status"></p>
+            <div class="admin-login-actions">
+                <button class="admin-login-cancel" id="adminLoginCancel" type="button">Cancel</button>
+                <button class="btn btn-primary" type="submit">Log In</button>
+            </div>
+        </form>
+    </dialog>
+
+    <main class="form-wrapper">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Book Your Court</h2>
+                <p>Select your court and preferred time to lock in your game.</p>
+            </div>
+            
+            <div id="successMessage" class="alert-success">
+                Booking successful! <a href="my-bookings.html">View My Bookings</a>
+            </div>
+
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Select Your Court</label>
+                    <div class="court-selection-grid">
+                        <div class="court-card" data-court="Court 1 (Indoor)">
+                            <img src="Court Pictures/court1.jfif" alt="Indoor Court 1">
+                            <div class="court-label">Court 1 (Indoor)</div>
+                        </div>
+                        <div class="court-card" data-court="Court 2 (Indoor)">
+                            <img src="Court Pictures/court2.jfif" alt="Indoor Court 2">
+                            <div class="court-label">Court 2 (Indoor)</div>
+                        </div>
+                        <div class="court-card" data-court="Court 3 (Outdoor)">
+                            <img src="Court Pictures/court3.jfif" alt="Outdoor Court 3">
+                            <div class="court-label">Court 3 (Outdoor)</div>
+                        </div>
+                        <div class="court-card" data-court="Court 4 (Outdoor)">
+                            <img src="Court Pictures/court4.jfif" alt="Outdoor Court 4">
+                            <div class="court-label">Court 4 (Outdoor)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group" style="display: none;">
+                    <label for="courtNumber">Court Confirmation</label>
+                    <select id="courtNumber" required>
+                        <option value="">-- Select a Court --</option>
+                        <option value="Court 1 (Indoor)">Court 1 (Indoor)</option>
+                        <option value="Court 2 (Indoor)">Court 2 (Indoor)</option>
+                        <option value="Court 3 (Outdoor)">Court 3 (Outdoor)</option>
+                        <option value="Court 4 (Outdoor)">Court 4 (Outdoor)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookingDate">Date</label>
+                    <input type="date" id="bookingDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="timeSlot">Time Slot</label>
+                    <select id="timeSlot" required>
+                        <option value="">-- Select Time --</option>
+                        <option value="08:00 AM - 09:00 AM">08:00 AM - 09:00 AM</option>
+                        <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
+                        <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                        <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                        <option value="12:00 PM - 01:00 PM">12:00 PM - 01:00 PM</option>
+                        <option value="01:00 PM - 02:00 PM">01:00 PM - 02:00 PM</option>
+                        <option value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+                        <option value="03:00 PM - 04:00 PM">03:00 PM - 04:00 PM</option>
+                        <option value="04:00 PM - 05:00 PM">04:00 PM - 05:00 PM</option>
+                        <option value="05:00 PM - 06:00 PM">05:00 PM - 06:00 PM</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Confirm Booking</button>
+            </form>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PickleCourt</h3>
+                <p>Your game, your time, your court.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courts.html">View Courts</a></li>
+                    <li><a href="my-bookings.html">My Bookings</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: PickleCourt@gmail.com</p>
+                <p>Phone: 0912 345 6789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 PickleCourt. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="booking-form.js"></script>
+</body>
+</html>

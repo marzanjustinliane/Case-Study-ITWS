@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PickleCourt | View Courts</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="courts.css">
+    <link rel="icon" type="image/png" href="Logo/PB Logo.png">
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Pickle<span>Court</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courts.html" class="active">View Courts</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="#contact">About Us</a></li>
+                <li><button class="admin-login-button" id="adminLoginButton" type="button">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <dialog class="admin-login-dialog" id="adminLoginDialog" aria-labelledby="adminLoginTitle">
+        <form id="adminLoginForm">
+            <h2 id="adminLoginTitle">Admin Login</h2>
+            <label for="adminUsername">Username</label>
+            <input id="adminUsername" name="username" type="text" autocomplete="username" required>
+            <label for="adminPassword">Password</label>
+            <input id="adminPassword" name="password" type="password" autocomplete="current-password" required>
+            <p class="admin-login-notice">Demo only — authentication is not connected.</p>
+            <p class="admin-login-message" id="adminLoginMessage" role="status"></p>
+            <div class="admin-login-actions">
+                <button class="admin-login-cancel" id="adminLoginCancel" type="button">Cancel</button>
+                <button class="btn btn-primary" type="submit">Log In</button>
+            </div>
+        </form>
+    </dialog>
+
+    <main class="courts-container">
+        <div class="courts-header">
+            <h2>Our Courts</h2>
+            <p>Browse our premier indoor and outdoor pickleball courts. Find the perfect setting for your next game.</p>
+        </div>
+
+        <div class="courts-grid">
+            <!-- Court 1 -->
+            <div class="court-display-card">
+                <img src="Court Pictures/court1.jfif" alt="Court 1 Indoor">
+                <div class="court-info">
+                    <h3>Court 1</h3>
+                    <span class="court-type">Indoor Court</span>
+                    <p>Enjoy your game in our covered court, perfect for playing while staying protected from the sun and rain.</p>
+                    <ul class="court-features">
+                        <li>Roofed court</li>
+                        <li>Rain-protected area</li>
+                        <li>Shaded playing space</li>
+                    </ul>
+                    <!-- URL parameter passes the court name to the booking form -->
+                    <a href="booking-form.html?court=Court 1 (Indoor)" class="btn btn-primary btn-book-court">Book This Court</a>
+                </div>
+            </div>
+
+            <!-- Court 2 -->
+            <div class="court-display-card">
+                <img src="Court Pictures/court2.jfif" alt="Court 2 Indoor">
+                <div class="court-info">
+                    <h3>Court 2</h3>
+                    <span class="court-type">Indoor Court</span>
+                    <p>Play comfortably in our spacious indoor gym, perfect for fun and exciting pickleball matches.</p>
+                    <ul class="court-features">
+                        <li>Indoor playing area</li>
+                        <li>Spacious gym court</li>
+                        <li>All-weather court</li>
+                    </ul>
+                    <a href="booking-form.html?court=Court 2 (Indoor)" class="btn btn-primary btn-book-court">Book This Court</a>
+                </div>
+            </div>
+
+            <!-- Court 3 -->
+            <div class="court-display-card">
+                <img src="Court Pictures/court3.jfif" alt="Court 3 Outdoor">
+                <div class="court-info">
+                    <h3>Court 3</h3>
+                    <span class="court-type">Outdoor Court</span>
+                    <p>Enjoy the fresh air and sunshine while playing pickleball in our open court.</p>
+                    <ul class="court-features">
+                        <li>Outdoor playing area</li>
+                        <li>Fresh-air court</li>
+                        <li>Asphalt Base</li>
+                    </ul>
+                    <a href="booking-form.html?court=Court 3 (Outdoor)" class="btn btn-primary btn-book-court">Book This Court</a>
+                </div>
+            </div>
+
+            <!-- Court 4 -->
+            <div class="court-display-card">
+                <img src="Court Pictures/court4.jfif" alt="Court 4 Outdoor">
+                <div class="court-info">
+                    <h3>Court 4</h3>
+                    <span class="court-type">Outdoor Court</span>
+                    <p>Experience fun and exciting games in our outdoor court, perfect for friendly matches with friends.</p>
+                    <ul class="court-features">
+                        <li>Outdoor game space</li>
+                        <li>Sunny playing area</li>
+                        <li>Spacious open court</li>
+                    </ul>
+                    <a href="booking-form.html?court=Court 4 (Outdoor)" class="btn btn-primary btn-book-court">Book This Court</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PickleCourt</h3>
+                <p>Your game, your time, your court.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courts.html">View Courts</a></li>
+                    <li><a href="my-bookings.html">My Bookings</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: PickleCourt@gmail.com</p>
+                <p>Phone: 0912 345 6789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 PickleCourt. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

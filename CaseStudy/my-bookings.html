@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PickleCourt | My Bookings</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="my-bookings.css">
+    <link rel="icon" type="image/png" href="Logo/PB Logo.png">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Pickle<span>Court</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courts.html">View Courts</a></li>
+                <li><a href="my-bookings.html" class="active">My Bookings</a></li>
+                <li><a href="#contact">About Us</a></li>
+                <li><button class="admin-login-button" id="adminLoginButton" type="button">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <dialog class="admin-login-dialog" id="adminLoginDialog" aria-labelledby="adminLoginTitle">
+        <form id="adminLoginForm">
+            <h2 id="adminLoginTitle">Admin Login</h2>
+            <label for="adminUsername">Username</label>
+            <input id="adminUsername" name="username" type="text" autocomplete="username" required>
+            <label for="adminPassword">Password</label>
+            <input id="adminPassword" name="password" type="password" autocomplete="current-password" required>
+            <p class="admin-login-notice">Demo only — authentication is not connected.</p>
+            <p class="admin-login-message" id="adminLoginMessage" role="status"></p>
+            <div class="admin-login-actions">
+                <button class="admin-login-cancel" id="adminLoginCancel" type="button">Cancel</button>
+                <button class="btn btn-primary" type="submit">Log In</button>
+            </div>
+        </form>
+    </dialog>
+
+    <main class="bookings-container">
+        <div class="bookings-header">
+            <h2>My Dashboard</h2>
+            <p>Manage and review your upcoming court reservations</p>
+        </div>
+        <div id="bookingsList"></div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PickleCourt</h3>
+                <p>Your game, your time, your court.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courts.html">View Courts</a></li>
+                    <li><a href="my-bookings.html">My Bookings</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: PickleCourt@gmail.com</p>
+                <p>Phone: 0912 345 6789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 PickleCourt. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="my-bookings.js"></script>
+</body>
+</html>
