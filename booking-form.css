@@ -1,0 +1,141 @@
+.form-wrapper {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(23, 78, 56, 0.1);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    color: #174e38;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #587267;
+    font-size: 16px;
+}
+
+/* VISUAL COURT SELECTOR WITH HOVER ZOOM */
+.court-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.court-card {
+    border: 2px solid #cdebd6;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    text-align: center;
+    position: relative;
+}
+
+.court-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #cdebd6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.court-card:hover img {
+    transform: scale(1.01);
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+.court-card.selected {
+    border-color: #168b50;
+    background: #eaf5ed;
+    box-shadow: 0 0 0 3px #168b50;
+}
+
+.court-card.selected .court-label {
+    color: #168b50;
+    font-weight: bold;
+}
+
+.court-label {
+    padding: 12px 10px;
+    font-size: 14px;
+    color: #174e38;
+}
+
+.form-group { margin-bottom: 22px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #174e38; }
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #cdebd6;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #1f4938;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: #168b50;
+    box-shadow: 0 0 0 3px rgba(22, 139, 80, 0.15);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    background: #168b50;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover { background: #0f6e3d; transform: translateY(-2px); }
+
+.alert-success {
+    display: none;
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+    border: 1px solid #c3e6cb;
+    font-weight: 500;
+}
+.alert-success a { color: #168b50; font-weight: bold; text-decoration: underline; }
+
+@media (max-width: 480px) {
+    .court-selection-grid { grid-template-columns: 1fr; }
+}
